@@ -1,18 +1,19 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-light">
+    <nav className="navbar navbar-expand-lg sticky-top bg-light">
       <div className="container">
         {/* Brand / Logo */}
-        <a href="#" className="navbar-brand">
+        <Link className="navbar-brand" to="/">
           <img
             src="media/logo.svg"
             alt="logo"
             className="mt-2"
             style={{ width: "129px", height: "17px" }}
           />
-        </a>
+        </Link>
 
         {/* Toggler button for mobile */}
         <button
@@ -31,32 +32,32 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+              <Link className="nav-link active" aria-current="page" to="/signup">
                 Signup
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/about">
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/products">
                 Products
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/pricing">
                 Pricing
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/support">
                 Support
-              </a>
+              </Link>
             </li>
             <li className="nav-item dropdown">
-              <a
+              <Link
                 className="nav-link dropdown-toggle"
                 href="#"
                 role="button"
@@ -64,25 +65,25 @@ function Navbar() {
                 aria-expanded="false"
               >
                 <i class="fa-solid fa-bars"></i>
-              </a>
+              </Link>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" href="#">
                     Action
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" href="#">
                     Another action
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  <Link className="dropdown-item" href="#">
                     Something else here
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
