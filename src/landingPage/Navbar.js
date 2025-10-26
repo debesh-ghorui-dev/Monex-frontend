@@ -57,7 +57,7 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <i className="fa-solid fa-bars"/>
+              <i className="fa-solid fa-bars" />
             </li>
           </ul>
         </div>
