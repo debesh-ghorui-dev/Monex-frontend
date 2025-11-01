@@ -17,6 +17,27 @@ const Holdings = () => {
             <th>Net chg.</th>
             <th>Day chg.</th>
           </tr>
+
+          {holdings.map((stock, index) => {
+            const currentValue = stock.price * stock.qty;
+            const isProfit = currentValue - stock.avg * stock.qty >= 0.0;
+            const ProfitAndLoss = currentValue - stock.avg * stock.qty;
+            const profitClass = isProfit ? "profit" : "loss";
+            const dayClass = stock.isLoss ? "loss" : "profit";
+
+            return (
+              <tr key={index}>
+                <td>{stock.name}</td>
+                <td>{stock.qty}</td>
+                <td>{stock.avg.toFixed(2)}</td>
+                <td>{stock.price.toFixed(2)}</td>
+                <td>{currentValue.toFixed(2)}</td>
+                <td className={profitClass}>{ProfitAndLoss.toFixed(2)}</td>
+                <td className={profitClass}>{stock.net}</td>
+                <td className={dayClass}>{stock.day}</td>
+              </tr>
+            );
+          })}
         </table>
       </div>
 
