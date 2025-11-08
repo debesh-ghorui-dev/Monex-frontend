@@ -7,7 +7,6 @@ const Holdings = () => {
   useEffect(() => {
     axios.get("http://localhost:5000/holdings")
       .then((res) => {
-        console.log(res.data);
         setHoldings(res.data);
       })
       .catch((err) => console.log(err))
